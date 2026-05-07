@@ -181,6 +181,19 @@ The entire attack — from initial compromise to repeated data exfiltration — 
 
 ---
 
+## 🧠 Challenges Faced & What I Learned
+
+Challenges faced:
+1. Base64 decoding the SMTP authentication strings using CyberChef — understanding that the credentials were encoded, not encrypted, was a key realization
+2. Distinguishing legitimate traffic from malicious traffic in 4,003 packets — deciding which filters to apply first (HTTP before SMTP) and why
+3. NetworkMiner extracted files automatically but understanding which extracted file was the actual payload required cross-referencing with VirusTotal hash lookup
+
+What I learned:
+1. The 10-minute exfiltration interval is a pattern — understanding beaconing intervals is critical for SIEM alert tuning
+2. A single PCAP can reveal victim hostname, MAC, username, internal IP, and full attack timeline if you know what to filter for.
+
+---
+
 ## 👤 About Me
 
 **Tripti Pal**  
