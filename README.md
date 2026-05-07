@@ -154,12 +154,16 @@ dns
 
 ```
 
-
 ## 🧠 MITRE ATT&CK Mapping
-- Initial Access: Phishing
-- Execution: Malicious file download
-- Command & Control: External communication
-- Exfiltration: Data transfer via HTTP
+
+| Tactic | Technique ID | Technique Name | Evidence |
+|--------|-------------|----------------|----------|
+| Initial Access | T1566.001 | Spearphishing Link | Fake invoice email with malicious download link |
+| Execution | T1204.002 | Malicious File | Victim executed tkraw_Protected99.exe |
+| Discovery | T1082 | System Information Discovery | Malware queried bot.whatismyipaddress.com |
+| Credential Access | T1555.003 | Credentials from Web Browsers | Chrome saved passwords stolen |
+| C2 | T1071.003 | Mail Protocols | SMTP port 587 to macwinlogistics.in |
+| Exfiltration | T1048.003 | Exfiltration Over Unencrypted Protocol | Stolen data emailed every ~10 minutes |
   
 ---
 
